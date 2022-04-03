@@ -1,5 +1,5 @@
-# cist1310spring2022
+# CIST 1310 Flask Demo Project
 
-### This is a testing project for class demo.  
+### This is the class demo project for Spring 2022.
 
-### We just updated this readme file.
+### 
