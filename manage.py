@@ -1,7 +1,9 @@
 from flask import Flask, request, redirect, url_for, render_template
+from flask_bootstrap import Bootstrap
 import sqlite3 as sql
 
 app = Flask(__name__)
+Bootstrap(app)
 
 @app.route("/<int:score>")
 def hello_world(score):

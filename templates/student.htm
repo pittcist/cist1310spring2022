@@ -1,27 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Information</title>
-</head>
-<body>
-    <form action="{{ url_for('addrec') }}" method = "POST">
+{% extends "bootstrap/base.html" %}
+{% block title %}This is an example page {% endblock %}
+
+
+{% block content %}
+<div class="col-md-8">
+<form action="{{ url_for('addrec') }}" method="POST" class="form-horizontal .col-md container-fluid">
         <h3>Student Information</h3>
-        
-        <p>Name</p>
-        <p><input type="text" name="nm"/></p>
 
-        <p>Address</p>
-        <p><input type="text" name="addr"/></p>
-        
-        <p>City</p>
-        <p><input type="text" name="city"/></p>
+        <div class="input-group input-group-lg">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="nm" class="form-control col-xs-3" placeholder="Enter name" />
+            </div>
 
-        <p>Pin</p>
-        <p><input type="text" name="pin"/></p>
-    
-        <p><input type="submit" value="Submit"/></p>
-    </form>
-</body>
-</html>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" name="addr" class="form-control col-xs-3" placeholder="Enter address" />
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" name="city" class="form-control col-xs-3" placeholder="Enter city" />
+            </div>
+            <div class="form-group">
+                <label>Pin</label>
+                <input type="text" name="pin" class="form-control col-xs-3" placeholder="Enter Your PIN number" />
+
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+
+</form>
+</div>
+{% endblock %}
