@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Information</title>
-</head>
-<body>
-    {% for row in rows %}
-    <p> {{ row["name"] }}</p>
-    <p> {{ row["address"] }}</p>
-    <p> {{ row["city"] }}</p>
-    <p> {{ row["pin"] }}</p>
-    <br/>
-    {% endfor %}
-</body>
-</html>
+{% extends "bootstrap/base.html" %}
+{% block title %}This is an example page {% endblock %}
+
+
+{% block content %}
+<div class="table-responsive-sm" style="width: 50%;">
+    <table class="table table-striped table-bordered table-nonfluid" >
+        <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Pin</th>
+        </tr>
+    </thead>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row["name"] }}</td>
+
+            <td>{{ row["address"] }}</td>
+
+            <td>{{ row["city"] }}</td>
+
+            <td>{{ row["pin"] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}
